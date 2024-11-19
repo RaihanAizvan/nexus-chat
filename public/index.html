@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Chat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    .bg-1 {
+        background: linear-gradient(130deg, #06141b, #0f1f2c, #0f2838, #08151d);
+    }
+
+    .bg-2 {
+        background: rgba(34, 109, 153, 0.26);
+        backdrop-filter: blur(10px);
+    }
+
+    .bg-3 {
+        background: linear-gradient(150deg, #27413e, #163944, #223835);
+    }
+
+    .bg-4 {
+        background: linear-gradient(150deg, #2d4f77, #163041, #2d4f77);
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chat-window::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chat-window::-moz-scrollbar {
+        display: none;
+    }
+
+    body {
+        overflow: hidden;
+        height: 100svh;
+        width: 100svw;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .chat-screen {
+        height: 100svh;
+    }
+
+    .text-xxs {
+        font-size: 8px;
+    }
+    .text-xss{
+        font-size: 10px;
+    }
+
+    .width-fit {
+        width: fit-content;
+    }
+    .containerr{
+        height: 100svh;
+    }
+</style>
+
+<body class="">
+    <div class="flex flex-col items-center justify-center h-screen bg-1 shadow-2xl shadow-white containerr">
+        <div
+            class="flex flex-col space-y-4 justify-between bg-1 rounded-lg w-full py-2 px-1 pb-5 max-w-md chat-screen">
+            <div class="w-full max-w-md p-3 bg-2 rounded-lg shadow-2xl shadow-white">
+                <div class="">
+                    <!-- <h1 class="text-xl text-center font-bold mb-2 text-white">Nexus Chat</h1> -->
+                    <div class="flex flex-row space-x-2 items-center">
+                        <div class="flex-none">
+                            <img src="https://as1.ftcdn.net/v2/jpg/03/53/11/00/1000_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg"
+                                alt="Profile Picture" class="w-8 h-8 bg-cover rounded-full">
+                        </div>
+                        <div>
+                            <input type="text" id="name-input" value="Mohammed Raihan" class="text-sm font-bold text-white bg-transparent focus:outline-none" >
+                            <p class="text-sm text-gray-400" id="feedback">typing...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4 w-full rounded-lg  overflow-y-auto">
+                <div id="chat-window"
+                    class="flex-1 flex flex-col p-4 rounded-lg overflow-y-auto chat-window scrollbar-hide">
+                    <!-- Demo chat messages will be appended here -->
+                    <!-- date -->
+                    <div class="flex flex-row my-4 bg-gray-700 rounded-lg mx-auto py-1 px-4 justify-center width-fit">
+                        <p class="text-white text-xss">19 Nov</p>
+                    </div>
+
+
+                    
+                    <div class="px-2 py-2 pb-1 bg-3 rounded-lg flex flex-col shadow mb-2 max-w-xs self-end">
+                        <div>
+                            <p class="text-white font-semibold text-xs text-green-600">Raihan</p>
+                        </div>
+                        <div>
+                            <p class="text-white text-xs pr-6">This is a demo sent message.</p>
+                        </div>
+                        <div class="flex flex-row self-end ">
+                            <p class="text-white text-xxs  mx-2">12:00 pm</p>
+                            <p class="text-white text-xxs ">&check;</p>
+                            <p class="text-white text-xxs ">&check;</p>
+                        </div>
+                    </div>
+
+
+                    <div class="px-2 py-2 pb-1 bg-4 rounded-lg flex flex-col shadow mb-2 max-w-xs self-start">
+                        <div>
+                            <p class="text-white font-semibold text-xs text-pink-800">Abbas</p>
+                        </div>
+                        <div>
+                            <p class="text-white text-xs pr-6">This is a demo sent message.</p>
+                        </div>
+                        <div class="flex flex-row self-end ">
+                            <p class="text-white text-xxs  mx-2">12:00 pm</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex flex-row my-4 bg-gray-700 rounded-lg mx-auto py-1 px-4 justify-center width-fit">
+                        <p class="text-white text-xss">Today</p>
+                    </div>
+                    
+                    
+                    
+                    <div class="px-2 py-2 pb-1 bg-3 rounded-lg flex flex-col shadow mb-2 max-w-xs self-end">
+                        <div>
+                            <p class="text-white font-semibold text-xs text-green-600">Raihan</p>
+                        </div>
+                        <div>
+                            <p class="text-white text-xs pr-6">Poi irinn padidaaa.</p>
+                        </div>
+                        <div class="flex flex-row self-end ">
+                            <p class="text-white text-xxs  mx-2">12:00 pm</p>
+                            <p class="text-white text-xxs ">&check;</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="px-2 py-2 pb-1 bg-3 rounded-lg flex flex-col shadow mb-2 max-w-xs self-end">
+                        <div>
+                            <p class="text-white font-semibold text-xs text-green-600">Raihan</p>
+                        </div>
+                        <div>
+                            <p class="text-white text-xs pr-6 ">.Daaaaaaaaaaaa Abbasee</p>
+                        </div>
+                        <div class="flex flex-row self-end ">
+                            <p class="text-white text-xxs  mx-2">12:00 pm</p>
+                            <p class="text-white text-xxs ">&check;</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <form class="flex items-center space-x-2 mt-4" id="message-form" >
+                    <input 
+                        id="message-input" 
+                        type="text"
+                        name="message"
+                        class="flex-1 py-4 px-2 text-xs focus:outline-none border border-gray-600 bg-1 text-white rounded-xl"
+                        placeholder="Enthelm Type Chey....">
+                    <button id="send-button" type="submit" class="p-2 px-3 bg-2 text-white rounded-lg">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="dom.js"></script>
+</body>
+
+</html>
