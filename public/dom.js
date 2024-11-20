@@ -65,9 +65,9 @@ socket.on("clients-total" , (data)=>{
 function sendMessage(){ 
 
 
-    //* check for empty message
+    //* check for empty message and whitespace
 
-    if(messageInput.value === ""){
+    if(messageInput.value === "" || messageInput.value === null){
         return
     }
 
