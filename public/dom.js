@@ -154,7 +154,9 @@ function scrollToBottom() {
     });
   
     // Keep the input field focused without causing a "bobbing" effect
-    messageInput.focus();
+    if (document.activeElement !== nameInput) {
+        messageInput.focus();
+    }
 
     
 }
