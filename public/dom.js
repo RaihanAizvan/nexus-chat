@@ -67,7 +67,7 @@ function sendMessage(){
 
     //* check for empty message and whitespace
 
-    if(messageInput.value === "" || messageInput.value === null){
+    if(messageInput.value.trim() === "" || messageInput.value === null){
         return
     }
 
