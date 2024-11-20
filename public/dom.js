@@ -32,7 +32,9 @@ const messageForm = document.getElementById("message-form")
 const messageInput = document.getElementById("message-input")
 const feedbackElement = document.getElementById("feedback")
 
-const randomNames = ["John" , "Jane" , "Doe" , "Alice" , "Bob" , "Charlie" , "David" , "Eve" , "Mallory" , "Trent"]
+const randomNames = ["Soman" , "Sasi" , "Janu" , "Lalettan" , "Sundaran" , "Sundari" , "Meenu" , "Janaki" , "Tovino" , "SuperMan"]
+const randomTyping = ["entho type cheyan..." , "type cheyan...." , "pani on the way..." , "typing aan..." ]
+
 nameInput.value = randomNames[Math.floor(Math.random() * randomNames.length)]
 
 
@@ -107,7 +109,7 @@ function addMessageToUi(isOwnMessage , data ){
                 <p class="text-white font-semibold text-xs text-green-600" id="sender-name">${data.name}</p>
             </div>
             <div>
-                <p class="text-white text-xs pr-6" id="sender-message-content">${data.message}</p>
+                <p class="text-white text-xs pr-6 break-all" id="sender-message-content">${data.message}</p>
             </div>
             <div class="flex flex-row self-end ">
                 <p class="text-white text-xxs  mx-2" id="sender-message-time">${data.time}</p>
@@ -127,7 +129,7 @@ function addMessageToUi(isOwnMessage , data ){
                 <p class="text-white font-semibold text-xs text-pink-800" id="reciever-name">${data.name}</p>
             </div>
             <div>
-                <p class="text-white text-xs pr-6" id="reciever-message-content">${data.message}</p>
+                <p class="text-white text-xs pr-6 break-all" id="reciever-message-content">${data.message}</p>
             </div>
             <div class="flex flex-row self-end ">
                 <p class="text-white text-xxs  mx-2" id="reciever-message-time">${data.time}</p>
@@ -152,12 +154,11 @@ function scrollToBottom() {
     });
   
     // Keep the input field focused without causing a "bobbing" effect
-    messageInput.focus(); 
+    messageInput.focus();
 
     
 }
 
-const randomTyping = ["entho type cheyan..." , "karyamaytt type cheyan...." , "pani on the way..." , "typing aan..." ]
 
 messageInput.addEventListener("focus" , (e)=>{
     socket.emit("typing" , {
